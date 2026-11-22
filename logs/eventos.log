@@ -1,0 +1,63 @@
+2026-11-22 17:16:42,902 | INFO    | === Inicio de la simulación de Software FJ ===
+2026-11-22 17:16:42,902 | INFO    | Cliente registrado: Cliente #1: Ana María Pérez | Doc: 1020304050 | ana@correo.com | Tel: 3001234567
+2026-11-22 17:16:42,902 | INFO    | Operación 01 (Registrar cliente válido (Ana)) exitosa.
+2026-11-22 17:16:42,902 | INFO    | Operación 01 finalizada.
+2026-11-22 17:16:42,902 | INFO    | Cliente registrado: Cliente #2: Carlos Ruiz | Doc: 79854123 | carlos.ruiz@mail.co | Tel: 3109876543
+2026-11-22 17:16:42,902 | INFO    | Operación 02 (Registrar cliente válido (Carlos)) exitosa.
+2026-11-22 17:16:42,902 | INFO    | Operación 02 finalizada.
+2026-11-22 17:16:42,902 | ERROR   | Operación 03 (Registrar cliente con correo inválido) falló: [FJ-001] Correo inválido: 'luis-sin-arroba'.
+2026-11-22 17:16:42,902 | INFO    | Operación 03 finalizada.
+2026-11-22 17:16:42,902 | ERROR   | Operación 04 (Registrar cliente sin documento (parámetro faltante)) falló: [FJ-002] El campo 'documento' es obligatorio.
+2026-11-22 17:16:42,902 | INFO    | Operación 04 finalizada.
+2026-11-22 17:16:42,902 | ERROR   | Operación 05 (Registrar cliente con documento duplicado) falló: [FJ-003] Ya existe un cliente con documento 1020304050.
+2026-11-22 17:16:42,902 | INFO    | Operación 05 finalizada.
+2026-11-22 17:16:42,903 | INFO    | Servicio creado: Sala 'Sala Innovación' | capacidad 12 personas | $50,000/h | disponible
+2026-11-22 17:16:42,903 | INFO    | Operación 06 (Crear servicio de sala válido) exitosa.
+2026-11-22 17:16:42,903 | INFO    | Operación 06 finalizada.
+2026-11-22 17:16:42,903 | INFO    | Servicio creado: Equipo 'Portátil Pro' (Portátil) | 5 unidades | $15,000/h + seguro $20,000
+2026-11-22 17:16:42,903 | INFO    | Operación 07 (Crear servicio de alquiler de equipo válido) exitosa.
+2026-11-22 17:16:42,903 | INFO    | Operación 07 finalizada.
+2026-11-22 17:16:42,903 | INFO    | Servicio creado: Asesoría 'Asesoría Cloud' | Cloud | nivel senior | $80,000/h
+2026-11-22 17:16:42,903 | INFO    | Operación 08 (Crear servicio de asesoría válido) exitosa.
+2026-11-22 17:16:42,903 | INFO    | Operación 08 finalizada.
+2026-11-22 17:16:42,903 | ERROR   | Operación 09 (Crear servicio con tarifa negativa) falló: [FJ-001] Tarifa por hora inválida: -100.
+2026-11-22 17:16:42,903 | INFO    | Operación 09 finalizada.
+2026-11-22 17:16:42,903 | INFO    | Servicio creado: Sala 'Sala Mantenimiento' | capacidad 8 personas | $40,000/h | no disponible
+2026-11-22 17:16:42,903 | INFO    | Operación 10 (Crear sala no disponible (mantenimiento)) exitosa.
+2026-11-22 17:16:42,903 | INFO    | Operación 10 finalizada.
+2026-11-22 17:16:42,903 | INFO    | Reserva creada: Reserva #11 | Ana María Pérez | Sala Innovación | 3.0 h | pendiente | costo: sin calcular
+2026-11-22 17:16:42,903 | INFO    | Operación 11 (Reserva válida de sala (10 personas, 3 h)) exitosa.
+2026-11-22 17:16:42,903 | INFO    | Operación 11 finalizada.
+2026-11-22 17:16:42,903 | INFO    | Reserva #11 confirmada.
+2026-11-22 17:16:42,903 | INFO    | Intento de procesar la reserva #11 finalizado.
+2026-11-22 17:16:42,903 | INFO    | Operación 12 (Confirmar y procesar con IVA 19 % y 10 % de descuento) exitosa.
+2026-11-22 17:16:42,904 | INFO    | Operación 12 finalizada.
+2026-11-22 17:16:42,904 | ERROR   | Operación 13 (Reserva de sala que excede la capacidad (encadenamiento)) falló: [FJ-005] No se pudo crear la reserva de 'Sala Innovación'. | causa original: DatoInvalidoError: [FJ-001] 30 personas exceden la capacidad (12).
+2026-11-22 17:16:42,904 | INFO    | Operación 13 finalizada.
+2026-11-22 17:16:42,904 | ERROR   | Operación 14 (Reserva con duración no numérica (encadenamiento)) falló: [FJ-001] Duración no numérica: 'abc'. | causa original: ValueError: could not convert string to float: 'abc'
+2026-11-22 17:16:42,904 | INFO    | Operación 14 finalizada.
+2026-11-22 17:16:42,904 | ERROR   | Operación 15 (Reserva de un servicio no disponible) falló: [FJ-004] El servicio 'Sala Mantenimiento' no está disponible.
+2026-11-22 17:16:42,904 | INFO    | Operación 15 finalizada.
+2026-11-22 17:16:42,904 | ERROR   | Operación 16 (Reserva de asesoría sin el parámetro 'modalidad') falló: [FJ-005] No se pudo crear la reserva de 'Asesoría Cloud'. | causa original: ParametroFaltanteError: [FJ-002] La asesoría requiere el parámetro 'modalidad'.
+2026-11-22 17:16:42,904 | INFO    | Operación 16 finalizada.
+2026-11-22 17:16:42,904 | INFO    | Reserva creada: Reserva #16 | Carlos Ruiz | Portátil Pro | 5.0 h | pendiente | costo: sin calcular
+2026-11-22 17:16:42,904 | INFO    | Operación 17 (Reserva válida de equipo y cancelación) exitosa.
+2026-11-22 17:16:42,904 | INFO    | Operación 17 finalizada.
+2026-11-22 17:16:42,904 | INFO    | Reserva #16 cancelada.
+2026-11-22 17:16:42,904 | INFO    | Operación 18 (Cancelar la reserva de equipo) exitosa.
+2026-11-22 17:16:42,904 | INFO    | Operación 18 finalizada.
+2026-11-22 17:16:42,904 | ERROR   | Operación 19 (Procesar una reserva cancelada (operación no permitida)) falló: [FJ-003] Reserva #16: debe estar confirmada para procesarse (estado 'cancelada').
+2026-11-22 17:16:42,904 | INFO    | Operación 19 finalizada.
+2026-11-22 17:16:42,904 | INFO    | Reserva creada: Reserva #17 | Carlos Ruiz | Asesoría Cloud | 2.0 h | pendiente | costo: sin calcular
+2026-11-22 17:16:42,904 | INFO    | Operación 20 (Reserva válida de asesoría virtual) exitosa.
+2026-11-22 17:16:42,904 | INFO    | Operación 20 finalizada.
+2026-11-22 17:16:42,904 | ERROR   | Operación 21 (Procesar una reserva sin confirmar) falló: [FJ-003] Reserva #17: debe estar confirmada para procesarse (estado 'pendiente').
+2026-11-22 17:16:42,904 | INFO    | Operación 21 finalizada.
+2026-11-22 17:16:42,904 | INFO    | Reserva #17 confirmada.
+2026-11-22 17:16:42,904 | INFO    | Intento de procesar la reserva #17 finalizado.
+2026-11-22 17:16:42,904 | ERROR   | Operación 22 (Confirmar y procesar con descuento fuera de rango (cálculo inconsistente)) falló: [FJ-006] Reserva #17: no se pudo calcular el costo. | causa original: CalculoInconsistenteError: [FJ-006] Descuento fuera de rango: 1.5.
+2026-11-22 17:16:42,904 | INFO    | Operación 22 finalizada.
+2026-11-22 17:16:42,904 | INFO    | Intento de procesar la reserva #17 finalizado.
+2026-11-22 17:16:42,904 | INFO    | Operación 23 (Procesar de nuevo con variante por defecto (solo IVA)) exitosa.
+2026-11-22 17:16:42,904 | INFO    | Operación 23 finalizada.
+2026-11-22 17:16:42,904 | INFO    | === Fin de la simulación: el sistema continuó estable ===
